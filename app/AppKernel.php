@@ -26,7 +26,8 @@ class AppKernel extends Kernel
             //new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
 
             // register your bundles
-            new Application\HelloBundle\HelloBundle(),
+            new Application\LiipToBundle\LiipToBundle(),
+
         );
 
         if ($this->isDebug()) {

@@ -1,0 +1,3 @@
+liipto:
+    pattern:  /{name}
+    defaults: { _controller: LiipToBundle:Default:index }

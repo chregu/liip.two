@@ -1,0 +1,74 @@
+{% block page_head_title %} 
+	Liip AG - liip.to
+{% endblock %}
+
+{% block html_head_css %} 
+	<link rel="shortcut icon" href="{$webrootStatic}images/favicon.ico" type="image/x-icon" />
+
+<!--
+	<link rel="stylesheet" type="text/css" href="{$webroot_yui}datatable/assets/skins/sam/datatable.css" /> 
+-->
+	<link rel="stylesheet" type="text/css" href="{$webroot_yui}reset-fonts-grids/reset-fonts-grids.css" />
+	<link rel="stylesheet" type="text/css" href="{$webroot_yui}base/base.css" />
+	<link rel="stylesheet" type="text/css" href="{$webrootStatic}css/default.css" media="screen" />
+<!--	<link rel="stylesheet" type="text/css" href="{$webroot_yui}/tabview/assets/skins/sam/tabview.css" />
+	<link rel="stylesheet" type="text/css" href="{$webroot_yui}/fonts/fonts-min.css" />	
+-->
+
+
+{% endblock %}
+
+{% block page_body %} 
+	<div id="doc4" class="yui-t5">
+		{{ block('html_body_header') }}
+		{{ block('html_body_content') }}
+		{{ block('html_body_footer') }}
+	</div>
+	{{ block('page_bottom_javascript') }}
+{% endblock %}
+
+{% block html_body_header %} 
+	<div id="hd">
+		<a id="root-link" href="{$webroot}"></a>
+		<!--
+							removed from inbetween release
+
+		<form method="get" name='searchform' action="/search/">
+		<div id="search">
+			<div id="myAutoComplete"> 
+			<label>Find a link:</label>
+			<input id="myInput" name="url" type="text"/> 
+				<div id="myContainer"></div> 
+				<input id="myHidden" type="hidden"/>
+			</div>
+		</div>
+	</form>--></div>
+{% endblock %}
+
+{% block html_body_content %} 
+	<div id="bd">
+		{{ block('page_body_content') }}
+	</div>
+{% endblock %}
+
+{% block page_body_content %} 
+	no content
+{% endblock %}
+
+{% block html_body_footer %} 
+	<div id="ft">
+		{{ block('page_body_footer') }}
+	</div>
+{% endblock %}
+
+{% block page_body_footer %} 
+{% endblock %}
+
+{% block page_bottom_javascript %} 
+	<script type="text/javascript" src="{$webroot_yui}yahoo-dom-event/yahoo-dom-event.js"><xsl:text> </xsl:text></script>
+	<script type="text/javascript" src="{$webroot_yui}connection/connection-min.js"><xsl:text> </xsl:text></script>
+	<script type="text/javascript" src="{$webroot_yui}json/json-min.js"><xsl:text> </xsl:text></script>
+	<script type="text/javascript" src="{$webrootStatic}js/liipto.js"><xsl:text> </xsl:text></script>
+{% endblock %}
+
+

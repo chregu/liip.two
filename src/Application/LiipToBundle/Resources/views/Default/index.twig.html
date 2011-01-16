@@ -1,0 +1,50 @@
+{% extends "LiipToBundle::master.twig.html" %}
+
+
+{% block page_body_content %} 
+    <div id="input_box">
+        <form method="get" name="formular"  action="/api/txt/">
+            <div id="col_1"> <!-- 375 -->
+                <label class="url" for="url">URL</label>
+                <input id="url" class="inputText" type="text" onblur="if(this.value=='') this.value='http://';" onfocus="if(this.value=='http://') this.value='';" value="http://" name="url"/>
+                 
+                
+                <!--<small>Must be 250 characters or less.</small>-->
+            </div>
+            
+            <div id="col_2"><!-- 330 -->
+                <div id="col_2_id_1">
+                    <span class="optional"> optional</span>
+                    <label class="liipto" for="code">liip.to/</label>
+                    <input id="code" class="inputText" type="text" onblur="if(this.value=='') this.value='custom';" onfocus="if(this.value=='custom') this.value='';"  value="custom" name="code" maxlength="20" />
+                    <img id="codeOkSpinner" style="visibility: hidden;" src="/static/yui/2-7-0/assets/skins/sam/wait.gif"/>
+                </div>
+            <!-- 
+                removed from inbetween release
+                <div id="col_2_id_2">
+                    <input id="checkbox" type="checkbox" name="checkbox"/><label class="private" for="checkbox">private</label>
+                </div>
+                -->
+            </div>				
+            <div id="col_3"><!-- 135 -->
+                <input id="button" type="submit" value="" />
+            </div>
+        </form>
+    </div>
+    <div id="additional_info">
+         <div id="yui-main"> 
+            
+        <div  id="poweredby" class="center">
+        <p>Powered by <a target="_self" href="http://www.liip.ch">Liip AG</a>
+          -  <a target="_self" href="http://svn.liip.ch/repos/public/misc/liipto/trunk/"><strong>Code</strong></a> (Free as in beer and speech)
+          -  We do nothing bad with your data, promised</p>
+        </div>
+        
+        </div>
+         
+    
+        <div class="yui-b" id="poweredby">
+    
+        </div>
+    </div>	
+{% endblock %}
