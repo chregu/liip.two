@@ -6,16 +6,16 @@
 {% endblock %}
 
 {% block html_head_css %} 
-	<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="{{ asset('bundles/liipto/images/favicon.ico') }}" type="image/x-icon" />
 
 <!--
-	<link rel="stylesheet" type="text/css" href="/static/yui/2-7-0/datatable/assets/skins/sam/datatable.css" /> 
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/liipto/yui/2-7-0/datatable/assets/skins/sam/datatable.css') }}" /> 
 -->
-	<link rel="stylesheet" type="text/css" href="/static/yui/2-7-0/reset-fonts-grids/reset-fonts-grids.css" />
-	<link rel="stylesheet" type="text/css" href="/static/yui/2-7-0/base/base.css" />
-	<link rel="stylesheet" type="text/css" href="/static/css/default.css" media="screen" />
-<!--	<link rel="stylesheet" type="text/css" href="/static/yui/2-7-0//tabview/assets/skins/sam/tabview.css" />
-	<link rel="stylesheet" type="text/css" href="/static/yui/2-7-0//fonts/fonts-min.css" />	
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/liipto/yui/2-7-0/reset-fonts-grids/reset-fonts-grids.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/liipto/yui/2-7-0/base/base.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/liipto/css/default.css') }}" media="screen" />
+<!--	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/liipto/yui/2-7-0//tabview/assets/skins/sam/tabview.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/liipto/yui/2-7-0//fonts/fonts-min.css') }}" />	
 -->
 
 
@@ -68,10 +68,10 @@
 {% endblock %}
 
 {% block page_bottom_javascript %} 
-	<script type="text/javascript" src="/static/yui/2-7-0/yahoo-dom-event/yahoo-dom-event.js"></script>
-	<script type="text/javascript" src="/static/yui/2-7-0/connection/connection-min.js"></script>
-	<script type="text/javascript" src="/static/yui/2-7-0/json/json-min.js"></script>
-	<script type="text/javascript" src="/static/js/liipto.js"></script>
+	<script type="text/javascript" src="{{ asset('bundles/liipto/yui/2-7-0/yahoo-dom-event/yahoo-dom-event.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/liipto/yui/2-7-0/connection/connection-min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/liipto/yui/2-7-0/json/json-min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/liipto/js/liipto.js') }}"></script>
 {% endblock %}
 
 

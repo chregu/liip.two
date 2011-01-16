@@ -1,0 +1,496 @@
+html, body {
+	padding:0px;
+	margin:0px;
+}
+input, textarea {
+	border: 1px solid #787979;
+	margin-top: 0.5em;
+	height: 35px;
+	font-size: 17px;
+	color: #787979;
+	padding: 7px;
+	float: left;
+}
+
+#bd {
+    padding-left: 25px;
+}
+
+#hd {
+	background-image: url('../images/header.gif');
+	background-position: center;	
+	background-repeat: no-repeat;
+	width: 900px;
+	height: 231px;
+	margin: 0 auto;
+}
+#hd p {
+	display: none;
+}
+
+#root-link {
+	display:block;
+	height:250px !important;
+	text-indent:-999em;
+	width:650px !important;
+	outline: none;
+	position: absolute !important;
+}
+
+#root-link-2page {
+	display:block;
+	height:100%;
+	text-indent:-999em;
+	width:100%;
+	outline: none;
+}
+#search {
+	float:right;
+	margin-right:20px;
+	margin-top:20px;
+}
+label.search{
+	margin-top: 7px;
+	margin-right: 13px;
+	margin-bottom: 5px;
+	padding-left: 4px;
+	padding-top: 3px;
+	padding-right: 5px;
+	padding-bottom: 3px;
+}
+#searchtitle{
+	text-align: center;
+	margin-left:38px;
+	margin-top:0;
+	padding-bottom:38px;
+	padding-top:38px;
+}
+#myAutoComplete{
+	width:18em; /* set width here or else widget will expand to fit its container */ 
+	padding-bottom:2em; 
+} 
+#myAutoComplete label{
+	margin-top:15px;
+	font-weight:bold;
+	color: #787979;
+} 
+.match { 
+	font-weight:bold; 
+} 
+#myInput{
+	width: 130px;
+	height: 20px;
+	font-size: 17px;
+}
+#myContainer{
+
+}
+#myHidden{
+	
+}
+
+#input_box {
+	background-image: url('../images/box.gif');
+	background-repeat: no-repeat;
+	width: 925px;
+	height: 108px;
+	margin-top: 35px;
+	margin-bottom: 25px;
+}
+
+#input_box label {
+	font-size:2em;
+	font-weight:bold;
+	color: #787979;
+	display:inline;
+}
+
+#input_box form {
+	margin-top: 20px;
+}
+
+#col_1 {
+	margin-top: 30px;
+	margin-right: 18px;
+	margin-left: 17px;
+	float: left;
+}
+#url {
+	width: 300px;
+	height: 20px;
+	font-size: 17px;
+}
+label.url{
+	margin-top: 7px;
+	margin-right: 13px;
+	margin-bottom: 5px;
+	padding-left: 4px;
+	padding-top: 3px;
+	padding-right: 5px;
+	padding-bottom: 3px;
+}
+
+#col_2 {
+ 	float: left;
+	background-image: url('../images/custom_background.gif');
+	background-repeat: no-repeat;
+	width: 328px;
+	height: 81px;
+	margin-top: 12px;
+	margin-right: 11px;
+	font-size: 15px !important;
+	color:  #787979;
+	font-weight:bold;
+	text-align: left;
+	vertical-align: middle;
+}
+
+#col_2 div {
+	float: left;
+}
+
+#col_2_id_1 {
+	position: relative;
+}
+.optional {
+	margin-top: 11px;
+	margin-left: 10px;
+	margin-bottom: -2px;
+	display: block;
+	font-weight: normal;
+	font-size: 10px;
+}
+
+label.liipto {
+	font-size: 15px !important;
+	margin-top: 6px;
+	margin-bottom: 5px;
+	margin-left: 3px;
+	padding: 8px;
+	padding-left: 7px;
+	padding-right: 5px;
+	float: left;
+}
+
+#code{
+	height:20px;
+	margin-top:4.5px;
+	font-size: 17px;
+	width: 220px;
+}
+
+#codeOkSpinner {
+	position: absolute;
+	right: 5px;
+	top: 33px;
+}
+	
+#checkbox {
+	border: none;
+	margin-top: 27px;
+	margin-left:5px;
+}
+
+label.private {
+	font-size: 15px !important;
+	padding: 12px;
+	padding-left: 7px;
+	padding-right: 5px;
+	float: right;
+	margin-top: 23px;
+}
+#col_3 {
+	margin-top: 29px;
+	float: left;
+}
+
+#button {
+	border: none;
+	width: 140px;
+	height: 52px;
+	background-image:url('../images/shortify_button.gif');
+	background-position: top;
+	margin: 0px;
+	padding: 0px;
+}
+
+#button:hover {
+	border:none;
+	width: 140px;
+	height: 52px;
+	background-image:url('../images/shortify_button.gif');
+	background-position: bottom;
+	margin: 0px;
+	padding: 0px;
+}
+
+#button_hover {
+	background-image:url('../images/shortify_button.gif');
+	border: 5px solid black;
+}
+
+#community {
+	border:0 none;
+	float:right;
+	margin-left:300px;
+	margin-right:25px;
+	margin-top:35px;
+}
+
+#community div {
+    float: left;
+    margin-left: 15px;
+}
+
+.img_com {
+	margin-left:5px;
+	margin-right: 5px;
+}
+
+#additional_info {
+	
+}
+#value-of {
+	font-size:2em;
+	font-weight:bold;
+	color: #787979;
+	display:inline;
+	margin-left:340px;
+	margin-top:36px;
+	position:absolute;
+}
+
+#poweredby {
+	margin-right: 20px;
+	margin-top: 45px;
+}
+
+#poweredby a {
+	color: #787979;
+	font-weight: bold;
+}
+
+#poweredby p {
+	color:#989898;
+	margin-bottom: 1.4em;
+	font-size: 0.9em;
+}
+
+label.test {
+	background: yellow;
+}
+
+#twitter {
+    width: 30px;
+    height: 30px;
+    background-image:url('../images/twitter.gif');
+}
+
+#facebook {
+    width: 30px;
+    height: 30px;
+    background-image:url('../images/facebook.gif');
+}
+
+/****YUI*/
+#demo {
+	color: #787979 !important;
+	border-color: #787979;
+}
+
+.yui-skin-sam .yui-navset .yui-content,
+.yui-skin-sam .yui-navset .yui-navset-top .yui-content {
+	width:651px;
+	padding:0px !important;
+}
+
+.yui-skin-sam .yui-navset .yui-nav .selected a,
+.yui-skin-sam .yui-navset .yui-nav .selected a em {
+	/*
+	background-color: #eef991;
+	*/
+	background:url(../images/tabview-background.gif) repeat-x !important;
+	
+	color: #787979 !important;
+	font-weight:normal;
+	border-color: #D3D4D4 !important;
+	border-bottom: none;
+}
+
+.yui-skin-sam .yui-navset .yui-nav .selected a,
+.yui-skin-sam .yui-navset .yui-nav .selected a:focus,
+.yui-skin-sam .yui-navset .yui-nav .selected a:hover {
+	color:#FFFFFF;
+	/*
+	background:#D3D4D4 url(../../../../assets/skins/sam/sprite.png) repeat-x scroll left -1400px !important;
+	*/
+}
+
+.yui-skin-sam .yui-navset .yui-nav a em,
+.yui-skin-sam .yui-navset .yui-navset-top .yui-nav a em {
+	border-color: #D3D4D4 !important;
+}
+
+
+.yui-skin-sam .yui-navset .yui-nav a:hover,
+.yui-skin-sam .yui-navset .yui-nav a:focus {
+	/*
+	background:#eef991 url(../../../../assets/skins/sam/sprite.png) repeat-x scroll left -1400px !important;
+	*/
+	background:url(../images/tabview-background.gif) repeat-x !important;
+}
+
+.yui-skin-sam .yui-navset .yui-nav a,
+.yui-skin-sam .yui-navset .yui-navset-top .yui-nav a {
+	background: none !important;
+	color: #787979 !important;
+	border-color: #D3D4D4 !important;
+}
+
+
+.yui-content {
+	background-color:white !important;
+	border-color:#d3d4d4 !important;
+}
+.yui-nav {
+	border: 0 none !important;
+}
+#output {
+	border: 0;
+}
+
+
+/********** YUI Table CSS **********/
+.tabview-table {
+    overflow: hidden;
+}
+
+
+#mySearchTableContainer.yui-skin-sam,
+#mySearchTableContainer.yui-dt table table{
+	border-style:solid !important;
+	border-width:1px 1px medium !important;
+}
+
+#myHottestTableContainer table,
+#myLatestTableContainer table {
+    border: none;
+}
+
+.tabview-table a,
+#mySearchTableContainer table tbody tr td div a,
+#myHottestTableContainer table tbody tr td div a,
+#myLatestTableContainer table tbody tr td div a {
+	color: #787979;
+}
+
+.tabview-table tr td,
+.tabview-table-hottest tr td,
+.tabview-table-search tr td {
+    width: 6520px;
+    border: none;
+    border-bottom: 1px solid #d3d4d4;
+}
+
+
+#myLatestTableContainer.yui-skin-sam .yui-dt table,
+#myHottestTableContainer.yui-skin-sam .yui-dt table{
+    border-collapse: collapse !important;
+    border: 1px solid #d3d4d4 !important;
+    border-bottom: none !important;
+}
+
+.yui-skin-sam tr.yui-dt-odd {
+    /*
+    background-color:#e0f23a !important;
+    */
+}
+
+#bd #yui-main .yui-b {
+    padding: 20px;
+}
+
+#yui-main {
+	margin-left: -15px;
+}
+
+#searchDiv{
+	margin: 0px 100px;
+}
+
+#yui-dt0-th-code{
+	width: 200px !important;
+}
+#yui-dt0-th-link{
+	width: 500px !important;
+}
+
+.yui-dt-odd{
+	background-color: #e7f573 !important;
+}
+
+.yui-skin-sam tr.yui-dt-odd td.yui-dt-asc,
+.yui-skin-sam tr.yui-dt-odd td.yui-dt-desc {
+background-color:#eeee40;
+}
+
+.yui-skin-sam tr.yui-dt-even td.yui-dt-asc,
+.yui-skin-sam tr.yui-dt-even td.yui-dt-desc {
+background-color:#f2f2a8;
+}
+
+/* ********* old ********** */
+
+
+#ft { 
+padding: 2em;
+    padding-top: 0.5em;
+}
+
+
+
+#bd  .yui-b{
+    /**padding-top: 2em;**/
+}
+
+
+#codeOk {
+    background-color: #ffffff; 
+    font-size:1.5em;
+    clear: none;
+    float: right;
+    width: 1em;
+    margin-top: 6px;
+    
+}
+
+form div {
+    /*
+ 	clear: left;
+    width: 35em;
+	*/
+}
+
+
+
+
+form label {
+    display:block;
+    float:left;
+    margin:2px 0pt 5px;
+    padding:3px 5px;
+	text-align:right;
+	/*
+	width:20em;
+    */
+}
+    
+#revcanurl {
+	display: block; 
+	margin:2px 0 5px;
+	padding:5px 5px;
+}
+
+.center {
+	text-align: center;
+}
