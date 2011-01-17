@@ -46,14 +46,15 @@ class ApiCallsController
         return $this->response;
     }
 
-    public function redirectAction($url) {
+    public function redirectAction($code) {
         
-        if (substr($url, -1) == "-") {
+        if (substr($code, -1) == "-") {
+            $url = $this->router->generate("api.resolve",array("code"=>  substr($code, 0, -1) ), true);
             $this->response->setRedirect($url);
             return $this->response;
         }
 
-        $url = $this->getUrlFromCode($url);
+        $url = $this->getUrlFromCode($code);
         ;
         if ($url) {
             $data = $url;
@@ -93,7 +94,7 @@ class ApiCallsController
             $this->response->headers->set("Content-Type","text/plain");
             return $this->response;
         }
-        $data = $this->router->generate("root",array(), true).$this->getShortCode($this->url, $code);
+        $data = $this->router->generate("redirect",array("code"=> $this->getShortCode($this->url, $code) ), true);
         $this->response->setContent($data);
         $this->response->headers->set("Content-Type","text/plain");
         return $this->response;
