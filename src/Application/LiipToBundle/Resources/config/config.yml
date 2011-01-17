@@ -1,0 +1,13 @@
+services:
+    liipto.default.controller:
+        class: Application\LiipToBundle\Controller\DefaultController
+        arguments:
+            - @view
+
+    liipto.apicalls.controller:
+        class: Application\LiipToBundle\Controller\ApiCallsController
+        arguments:
+            - @view
+            - @request
+            - @database_connection
+

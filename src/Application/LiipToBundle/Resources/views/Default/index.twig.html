@@ -3,7 +3,7 @@
 
 {% block page_body_content %} 
     <div id="input_box">
-        <form method="get" name="formular"  action="/api/txt/">
+        <form method="get" name="formular"  action="{{ path('api.txt') }}">
             <div id="col_1"> <!-- 375 -->
                 <label class="url" for="url">URL</label>
                 <input id="url" class="inputText" type="text" onblur="if(this.value=='') this.value='http://';" onfocus="if(this.value=='http://') this.value='';" value="http://" name="url"/>
