@@ -37,7 +37,7 @@ YAHOO.liipto.checkCodeReverse = function() {
 	
 	
     var handleFailure = function(o) {
-        console.log("FAILURE " + alert(o.statusText));
+        console.log("FAILURE " + o.statusText);
     };
     
     var codeKeypressAsync = function() {
@@ -75,8 +75,11 @@ YAHOO.liipto.checkCodeReverse = function() {
             
     };
 	
-	var request = function() {
+    var request = function() {
         var value = YAHOO.lang.trim(D.get('url').value);
+        if (!value.match(/^(http|https):\/\/.+\..+/)) {
+            return;
+        }
         D.setStyle('codeOkSpinner','visibility', 'visible');
         var sUrl = apiURL + encodeURIComponent(value);
         var callback = {
