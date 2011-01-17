@@ -42,6 +42,27 @@ class ApiCallsController extends Controller
         return new \Symfony\Component\HttpFoundation\Response(json_encode(array("alias" =>  $data,"revcan" => $this->getRevCanonical($this->url))));
     }
 
+    public function redirectAction($url) {
+        
+        if (substr($url, -1) == "-") {
+
+
+            $this->response->redirect(API_WEBROOT . "api/resolve/" . substr($this->url, 0, -1));
+        }
+        $url = $this->getUrlFromCode($url);
+        ;
+        if ($url) {
+            $data = $url;
+        } else {
+            die("error");
+        }
+
+        $response = new \Symfony\Component\HttpFoundation\Response();
+        $response->setRedirect($url);
+        return $response;
+    }
+
+
 
     public function createAction() {
 
@@ -60,6 +81,17 @@ class ApiCallsController extends Controller
         return new  \Symfony\Component\HttpFoundation\Response($data,200,array("Content-Type"=>"text/plain"));
         
     }
+
+    protected function getUrlFromCode($code)
+    {
+        $query = "SELECT url from urls where code = :code";
+        $stm = $this->db->prepare($query);
+        $stm->execute(array(
+                ":code" => $code
+        ));
+        return $stm->fetchColumn();
+    }
+
 
 
     protected function getCodeFromDB($url)

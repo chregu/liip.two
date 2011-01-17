@@ -2,9 +2,9 @@ root:
     pattern:  /
 #    defaults: { _controller: LiipToBundle:Default:index }
     defaults: { _controller: liipto.default.controller:indexAction }
-resolve:
-    pattern:  /{name}
-    defaults: { _controller: liipto.default.controller:indexAction }
+redirect:
+    pattern: /{url}
+    defaults: { _controller: liipto.apicalls.controller:redirectAction }
 api.rchkrev:
     pattern: /api/rchkrev/
     defaults: { _controller: liipto.apicalls.controller:checkCodeReverseAndRevCanAction, _format: json }
