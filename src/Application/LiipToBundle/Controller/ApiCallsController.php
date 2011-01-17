@@ -2,9 +2,8 @@
 
 namespace Application\LiipToBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class ApiCallsController extends Controller
+class ApiCallsController 
 {
     protected $view;
     protected $request;
