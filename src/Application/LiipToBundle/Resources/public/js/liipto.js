@@ -24,7 +24,8 @@ YAHOO.liipto.checkCodeReverse = function() {
 	
 	var handleSuccess = function(o) {
         D.setStyle('codeOkSpinner', 'visibility', 'hidden');
-		var result = YAHOO.lang.JSON.parse(o.responseText);
+        var result = YAHOO.lang.JSON.parse(o.responseText);
+        console.log(result);
         if (result.alias) {
             codeRed(result.alias);
         } else {
@@ -46,7 +47,7 @@ YAHOO.liipto.checkCodeReverse = function() {
     
     var codeKeypress = function() {
         var value = YAHOO.lang.trim(D.get('url').value);
-		if (keypressTimer) {
+        if (keypressTimer) {
             keypressTimer.cancel();
         }
         
@@ -54,7 +55,6 @@ YAHOO.liipto.checkCodeReverse = function() {
             YAHOO.util.Connect.abort(codeCheckRequest); 
 			delete codeCheckRequest;
         }
-        
         if (value === '') {
             D.setStyle("codeOk","background-color","white");
             D.setStyle('codeOkSpinner','visibility', 'hidden');
@@ -147,6 +147,7 @@ YAHOO.liipto.checkCode = function() {
     var handleSuccess = function(o) {
         D.setStyle('codeOkSpinner','visibility', 'hidden');
         var result = YAHOO.lang.JSON.parse(o.responseText);
+        
         if (result) {
             codeRed();
         } else {
