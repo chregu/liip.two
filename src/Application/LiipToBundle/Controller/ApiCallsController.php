@@ -62,6 +62,16 @@ class ApiCallsController extends Controller
         return $response;
     }
 
+    public function checkCodeAction($code)
+    {
+        if ($this->codeExists($code)) {
+            $data = 'true';
+        } else {
+            $data = 'false';
+        }
+        return new \Symfony\Component\HttpFoundation\Response($data,200,array("Content-Type"=>"text/plain"));
+
+    }
 
 
     public function createAction() {

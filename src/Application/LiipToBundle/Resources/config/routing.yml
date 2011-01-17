@@ -8,6 +8,9 @@ redirect:
 api.rchkrev:
     pattern: /api/rchkrev/
     defaults: { _controller: liipto.apicalls.controller:checkCodeReverseAndRevCanAction, _format: json }
+api.chk:
+    pattern: /api/chk/{code}
+    defaults: { _controller: liipto.apicalls.controller:checkCodeAction, _format: json }
 api.txt:
     pattern: /api/txt/
     defaults: { _controller: liipto.apicalls.controller:createAction, _format: json }

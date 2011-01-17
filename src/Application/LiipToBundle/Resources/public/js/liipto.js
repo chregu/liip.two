@@ -25,7 +25,6 @@ YAHOO.liipto.checkCodeReverse = function() {
 	var handleSuccess = function(o) {
         D.setStyle('codeOkSpinner', 'visibility', 'hidden');
         var result = YAHOO.lang.JSON.parse(o.responseText);
-        console.log(result);
         if (result.alias) {
             codeRed(result.alias);
         } else {
@@ -142,7 +141,7 @@ YAHOO.liipto.checkCode = function() {
     var keypressTimer = null;
     var codeCheckRequest = null;
     var codeCheckResults = [];
-    var urlAPI = "/api/chk/";
+    var urlAPI = "./api/chk/";
 	
     var handleSuccess = function(o) {
         D.setStyle('codeOkSpinner','visibility', 'hidden');
