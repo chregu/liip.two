@@ -34,6 +34,15 @@ class ApiCallsController extends Controller
          */
     }
 
+    public function checkCodeReverseAndRevCanAction() {
+        $data = $this->getCodeFromDB($this->request->get("url"));
+        if (!$data) {
+            $data = false;
+        }
+        return new \Symfony\Component\HttpFoundation\Response(json_encode(array("alias" =>  $data,"revcan" => $this->getRevCanonical($this->url))));
+    }
+
+
     public function createAction() {
 
         if (empty($this->url)) {
@@ -48,7 +57,7 @@ class ApiCallsController extends Controller
             return new \Symfony\Component\HttpFoundation\Response($revcan,200,array("Content-Type"=>"text/plain"));
         }
         $data = 'http://example.com/'.$this->getShortCode($this->url, $code);
-        return new \Symfony\Component\HttpFoundation\Response($data,200,array("Content-Type"=>"text/plain"));
+        return new  \Symfony\Component\HttpFoundation\Response($data,200,array("Content-Type"=>"text/plain"));
         
     }
 
