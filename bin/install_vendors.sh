@@ -61,3 +61,6 @@ git clone git://github.com/zendframework/zf2.git zend
 cd zend
 git submodule update --recursive --init
 cd $DIR/vendor
+
+
+cd $DIR && mkdir -p src/Bundle/Liip && git clone git://github.com/liip/ViewBundle.git src/Bundle/Liip/ViewBundle
