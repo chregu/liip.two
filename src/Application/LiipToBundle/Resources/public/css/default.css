@@ -117,9 +117,11 @@ label.search{
 }
 #url {
 	width: 300px;
-	height: 20px;
+	height: 35px;
 	font-size: 17px;
 }
+
+
 label.url{
 	margin-top: 7px;
 	margin-right: 13px;
@@ -173,7 +175,7 @@ label.liipto {
 }
 
 #code{
-	height:20px;
+	height:35px;
 	margin-top:4.5px;
 	font-size: 17px;
 	width: 220px;
