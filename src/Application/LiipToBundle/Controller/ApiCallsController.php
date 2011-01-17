@@ -28,8 +28,9 @@ class ApiCallsController extends Controller
         if (!$data) {
             $data = false;
         }
+        $this->response->setContent(json_encode($data));
+        return $this->response;
 
-        return new \Symfony\Component\HttpFoundation\Response(json_encode($data));
         // the LiipViewBundle way, but that returns an json-ified array of $data, not $data itself
         /*
           $this->view->setParameters($data);
@@ -72,8 +73,9 @@ class ApiCallsController extends Controller
         } else {
             $data = 'false';
         }
-        return new \Symfony\Component\HttpFoundation\Response($data,200,array("Content-Type"=>"text/plain"));
-
+        $this->response->setContent($data);
+        $this->response->headers->set("Content-Type","text/plain");
+        return $this->response;
     }
 
 
@@ -88,10 +90,15 @@ class ApiCallsController extends Controller
             //normalize code
             $code = preg_replace("#[^a-zA-Z0-9_]#", "", $code);
         } else if ($revcan = $this->getRevCanonical($this->url)) {
-            return new \Symfony\Component\HttpFoundation\Response($revcan,200,array("Content-Type"=>"text/plain"));
+            $this->response->setContent($revcan);
+            $this->response->headers->set("Content-Type","text/plain");
+            return $this->response;
         }
         $data = $this->router->generate("root",array(), true).$this->getShortCode($this->url, $code);
-        return new  \Symfony\Component\HttpFoundation\Response($data,200,array("Content-Type"=>"text/plain"));
+        $this->response->setContent($data);
+        $this->response->headers->set("Content-Type","text/plain");
+        return $this->response;
+        
         
     }
 
