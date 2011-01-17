@@ -10,4 +10,9 @@ services:
             - @view
             - @request
             - @database_connection
+            - @router
+            - @response
+#        calls:
+#            - [setContainer, [@service_container]]
+
 
