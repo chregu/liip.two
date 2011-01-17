@@ -9,12 +9,15 @@ class ApiCallsController extends Controller
     protected $view;
     protected $request;
 
-    public function __construct($view, $request, $db)
+        public function __construct($view, \Symfony\Component\HttpFoundation\Request $request, $db, \Symfony\Component\Routing\RouterInterface $router, \Symfony\Component\HttpFoundation\Response $response)
     {
         $this->db = $db;
         $this->view = $view;
         $this->request = $request;
+        $this->response = $response;
         $this->url = $this->request->get("url");
+        $this->router = $router;
+        
     }
 
    
@@ -39,16 +42,17 @@ class ApiCallsController extends Controller
         if (!$data) {
             $data = false;
         }
-        return new \Symfony\Component\HttpFoundation\Response(json_encode(array("alias" =>  $data,"revcan" => $this->getRevCanonical($this->url))));
+        $this->response->setContent(json_encode(array("alias" =>  $data,"revcan" => $this->getRevCanonical($this->url))));
+        return $this->response;
     }
 
     public function redirectAction($url) {
         
         if (substr($url, -1) == "-") {
-
-
-            $this->response->redirect(API_WEBROOT . "api/resolve/" . substr($this->url, 0, -1));
+            $this->response->setRedirect($url);
+            return $this->response;
         }
+
         $url = $this->getUrlFromCode($url);
         ;
         if ($url) {
@@ -57,9 +61,8 @@ class ApiCallsController extends Controller
             die("error");
         }
 
-        $response = new \Symfony\Component\HttpFoundation\Response();
-        $response->setRedirect($url);
-        return $response;
+        $this->response->setRedirect($url);
+        return $this->response;
     }
 
     public function checkCodeAction($code)
@@ -87,7 +90,7 @@ class ApiCallsController extends Controller
         } else if ($revcan = $this->getRevCanonical($this->url)) {
             return new \Symfony\Component\HttpFoundation\Response($revcan,200,array("Content-Type"=>"text/plain"));
         }
-        $data = 'http://example.com/'.$this->getShortCode($this->url, $code);
+        $data = $this->router->generate("root",array(), true).$this->getShortCode($this->url, $code);
         return new  \Symfony\Component\HttpFoundation\Response($data,200,array("Content-Type"=>"text/plain"));
         
     }
