@@ -1,4 +1,5 @@
-/vendor/
+/src/vendor/
 /app/cache/*
 /app/logs/*
 /web/bundles
+/src/Bundle
